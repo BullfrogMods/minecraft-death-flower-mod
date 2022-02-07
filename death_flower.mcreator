@@ -1,0 +1,58 @@
+{
+  "mod_elements": [
+    {
+      "name": "DeathFlowerStartToDestroy",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_flower_start_to_destroy",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DeathFlower",
+      "type": "plant",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death_flower"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.death_flower.death_flower": "Death Flower"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "death_flower",
+    "modName": "Death Flower",
+    "version": "1.0.0",
+    "author": "jeremiah, MCreator",
+    "websiteURL": "https://github.com/BullfrogMods/minecraft-death-flower-mod",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.17.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.deathflower",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}

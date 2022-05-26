@@ -39,7 +39,7 @@
   "workspaceSettings": {
     "modid": "death_flower",
     "modName": "Death Flower",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Don\u0027t pick up this flower unless you want to die!",
     "author": "jeremiah, MCreator",
     "websiteURL": "https://github.com/BullfrogMods/minecraft-death-flower-mod",
@@ -50,10 +50,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.17.1",
+    "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.deathflower",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100354000
+  "mcreatorVersion": 202200120510
 }

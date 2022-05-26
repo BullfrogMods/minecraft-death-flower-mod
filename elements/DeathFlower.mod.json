@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 28,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -15,7 +15,7 @@
     "suspiciousStewEffect": "INSTANT_DAMAGE",
     "suspiciousStewDuration": 500,
     "growapableSpawnType": "Plains",
-    "growapableMaxHeight": 3,
+    "growapableMaxHeight": 1,
     "doublePlantGenerationType": "Flower",
     "customBoundingBox": false,
     "disableOffset": false,
@@ -37,7 +37,7 @@
     },
     "hardness": 0.0,
     "resistance": 100.0,
-    "luminance": 15,
+    "luminance": 0,
     "unbreakable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
@@ -87,7 +87,8 @@
       "Surface"
     ],
     "restrictionBiomes": [],
-    "patchSize": 64,
+    "patchSize": 30,
+    "generateAtAnyHeight": false,
     "onDestroyedByPlayer": {
       "name": "DeathFlowerStartToDestroy"
     }

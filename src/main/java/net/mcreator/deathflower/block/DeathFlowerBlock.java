@@ -31,9 +31,7 @@ import java.util.Collections;
 
 public class DeathFlowerBlock extends FlowerBlock {
 	public DeathFlowerBlock() {
-		super(MobEffects.HARM, 500,
-				BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).strength(0f, 100f).lightLevel(s -> 15));
-		setRegistryName("death_flower");
+		super(MobEffects.HARM, 500, BlockBehaviour.Properties.of(Material.PLANT).noCollission().sound(SoundType.GRASS).strength(0f, 100f));
 	}
 
 	@Override
@@ -74,14 +72,14 @@ public class DeathFlowerBlock extends FlowerBlock {
 	}
 
 	@Override
-	public boolean removedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		DeathFlowerStartToDestroyProcedure.execute(entity);
 		return retval;
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(DeathFlowerModBlocks.DEATH_FLOWER, renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(DeathFlowerModBlocks.DEATH_FLOWER.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

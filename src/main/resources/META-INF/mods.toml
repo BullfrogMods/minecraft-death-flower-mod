@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[37,)"
+loaderVersion="[40,)"
 license="MIT License"
 
 [[mods]]
 modId="death_flower"
-version="1.0.0"
+version="1.0.1"
 displayName="Death Flower"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://github.com/BullfrogMods/minecraft-death-flower-mod"
@@ -16,7 +16,7 @@ Don't pick up this flower unless you want to die!
 [[dependencies.death_flower]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1]"
+    versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"
 

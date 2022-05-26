@@ -16,13 +16,19 @@ package net.mcreator.deathflower;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.minecraftforge.fmllegacy.network.simple.SimpleChannel;
-import net.minecraftforge.fmllegacy.network.NetworkRegistry;
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
+
+import net.mcreator.deathflower.init.DeathFlowerModItems;
+import net.mcreator.deathflower.init.DeathFlowerModFeatures;
+import net.mcreator.deathflower.init.DeathFlowerModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -38,6 +44,12 @@ public class DeathFlowerMod {
 	private static int messageID = 0;
 
 	public DeathFlowerMod() {
+
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		DeathFlowerModBlocks.REGISTRY.register(bus);
+		DeathFlowerModItems.REGISTRY.register(bus);
+
+		DeathFlowerModFeatures.REGISTRY.register(bus);
 
 	}
 
